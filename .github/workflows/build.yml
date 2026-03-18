@@ -46,11 +46,9 @@ jobs:
             sudo ln -sf "/usr/lib/go-win7/src/runtime/$f" "/usr/lib/go-win7/pkg/include/$f"
           done
 
-      - name: Build server
-        run: make server
-
-      - name: Build extenders
-        run: make extenders
+      - name: Build server + extenders
+        run: make server-ext
+        
 
       - name: List build artifacts
         run: |
